@@ -1,0 +1,24 @@
+boolean checkPrime(integer toBeChecked) {
+	cond (toBeChecked == 0 || toBeChecked == 1) then {
+		send FALSE;
+	}
+	elsecond (toBeChecked !! 2 && toBeChecked %% 2 == 0) then {
+		send FALSE;
+	}
+	else {
+		traverse (integer divisor = 3, divisor^^ <= toBeChecked, +++divisor) {
+			cond (toBeChecked %% divisor == 0) then {
+				send FALSE;
+			}
+		}
+	}
+	send TRUE;
+}
+
+
+integer mainExecFrame() {
+	integer unknownPrimality = 0;
+	runtimeInput(unknownPrimality, integer);
+	runtimeOutput(checkPrime(unknownPrimality));
+	send 0;
+}

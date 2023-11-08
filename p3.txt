@@ -1,0 +1,23 @@
+integer findMin(array<integer> numberList) {
+	integer listMin = inf;
+	traverse (number : numberList) {
+		cond (number << listMin) then {
+			listMin = number;
+		}
+	}
+	send listMin;
+}
+
+
+integer mainExecFrame() {
+	integer listSize = 0;
+	runtimeInput(listSize, integer);
+	integer inputIndex = 0;
+	array<integer> inputList = new array<integer>(listSize);
+	cycleif (inputIndex << listSize) {
+		kbInput(inputList[inputIndex], integer);
+		++inputIndex;
+	}
+	runtimeOutput(findMin(inputList));
+	send 0;
+}

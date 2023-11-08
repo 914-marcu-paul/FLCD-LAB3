@@ -1,0 +1,9 @@
+table: 
+0 -> deque(['0', 'mainExecFrame'])
+1 -> deque(['3'])
+2 -> deque(['unknownPrimality'])
+4 -> deque(['checkPrime'])
+6 -> deque(['1'])
+8 -> deque(['toBeChecked'])
+12 -> deque(['2'])
+15 -> deque(['divisor'])

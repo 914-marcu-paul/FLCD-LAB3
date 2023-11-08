@@ -1,0 +1,18 @@
+integer greatestCommonDivisor(integer firstNumber, integer secondNumber) {
+	cycleif (secondNumber !! 0) {
+		integer remainder = firstNumber %% secondNumber;
+		firstNumber = secondNumber;
+		secondNumber = remainder;
+	}
+	send firstNumber;
+}
+
+
+integer mainExecFrame() {
+	integer firstNumber = 0;
+	runtimeInput(firstNumber, integer);
+	integer secondNumber = 0;
+	runtimeInput(secondNumber, integer);
+	runtimeOutput(greatestCommonDivisor(firstNumber, secondNumber));
+	send 0;
+}
